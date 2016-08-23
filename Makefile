@@ -1,4 +1,4 @@
-HEADERS = libft.h
+HEADERS = includes/libft.h
 
 CC = gcc
 

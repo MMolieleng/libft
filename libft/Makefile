@@ -4,9 +4,9 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = src/ft_memset.c\
-	src/ft_putstr.c\
-	src/ft_putchar.c
+SRC = src/ft_putstr.c\
+	src/ft_putchar.c\
+	src/ft_strdup.c
 
 LFLAGS = -L
 
@@ -17,7 +17,7 @@ PROG = libft.a
 OBJECTS = $(SRC:.c=.o)
 
 $(PROG): $(HEADERS)
-	@$(CC) $(CFLAGS) -c $(SRC) $(HEADERS)
+	@$(CC) $(CFLAGS) -c -I includes/ $(SRC) $(HEADERS)
 	@ar rc $(PROG) *.o
 	@ranlib $(PROG)
 	@echo "Compiling library....[OK]"

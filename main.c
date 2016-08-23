@@ -1,8 +1,12 @@
-#include "libft/includes/libft.h"
+#include "libft.h"
 #include <unistd.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	ft_putstr("Hello WOrld\n\n\0");
+	char *s = "Mohale";
+	ft_putstr(s);
+	ft_putchar('\n');
+	ft_strdup(s);		
 	return (0);
 }

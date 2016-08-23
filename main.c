@@ -1,10 +1,8 @@
-#include "libft.h"
-#include <stdio.h>
+#include "libft/includes/libft.h"
+#include <unistd.h>
 
 int	main(void)
 {
-	char str[] = "Mohale";
-
-	printf("%s",(char *)ft_memset(str, '$', 4));
+	ft_putstr("Hello WOrld\n\n\0");
 	return (0);
 }

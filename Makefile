@@ -1,36 +1,40 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2016/08/23 10:52:14 by mmoliele          #+#    #+#              #
+#    Updated: 2016/08/23 10:53:00 by mmoliele         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = mylibft
+
 HEADERS = includes/libft.h
 
-CC = gcc
+SRC = main.c
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = src/ft_memset.c\
-	src/ft_putstr.c\
-	src/ft_putchar.c
+LIB = libft/
 
-LFLAGS = -L
+LIBOPTIONS = -L libft/ -lft
 
-LDLIBS = -lft
-
-PROG = libft.a
-
-OBJECTS = $(SRC:.c=.o)
-
-$(PROG): $(HEADERS)
-	@$(CC) $(CFLAGS) -c $(SRC) $(HEADERS)
-	@ar rc $(PROG) *.o
-	@ranlib $(PROG)
-	@echo "Compiling library....[OK]"
-
-all:$(PROG)
-	@echo "Finish status....[OK]"
+$(NAME):
+	@make -C libft/
+	@gcc $(CFLAGS) main.c -o $(NAME) $(LIBOPTIONS)
+	@echo "\x1B[32mCompiled project.\x1B[0m"
 
 clean:
-	rm -f *.o
+	@make -C libft/ clean
+	@rm -f $(NAME)
+	@echo "\x1B[32mCleaned up object files.\x1B[0m"
 
 fclean:
-	rm -f $(PROG)
+	@make -C libft/ fclean
+	@echo "\x1B[32mCleaned up compiled files.\x1B[0m"
 
-re: fclean all
-
-.PHONEY: clean fclean re
+re:
+	@make -C libft/ re

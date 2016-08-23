@@ -6,7 +6,7 @@
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 13:17:45 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/23 16:46:10 by mmoliele         ###   ########.fr       */
+/*   Updated: 2016/08/23 17:38:35 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ char	*ft_strdup(char *str);
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
 char    *ft_memset(void *s, int c, size_t count);
+void    ft_bzero(char *s, size_t n);
 #endif

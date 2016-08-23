@@ -6,19 +6,20 @@
 #    By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 16:21:43 by mmoliele          #+#    #+#              #
-#    Updated: 2016/08/23 16:46:37 by mmoliele         ###   ########.fr        #
+#    Updated: 2016/08/23 17:38:58 by mmoliele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC 	= gcc -c -Wall -Werror -Wextra
+CC = gcc -c -Wall -Werror -Wextra
 
-SRC	= 	ft_putstr.c		\
+SRC = 	ft_putstr.c		\
 		ft_putchar.c	\
 		ft_strdup.c		\
 		ft_strlen.c		\
 		ft_memset.c		\
+		ft_bzero.c		\
 
 INC = 	libft.h			\
 

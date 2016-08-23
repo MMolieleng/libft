@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/23 13:17:45 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/23 16:46:10 by mmoliele         ###   ########.fr       */
+/*   Created: 2016/08/23 16:39:45 by mmoliele          #+#    #+#             */
+/*   Updated: 2016/08/23 16:45:28 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
+#include "../includes/libft.h"
 
-/*
-typedef struct			s_list
+char	*ft_memset(void *s, int c, size_t count)
 {
-	void				*data;
-	void				*content;
-	struct s_list		*next;
-}						t_list;
-*/
+	char	*str;
 
-int		ft_strlen(char *str);
-char	*ft_strdup(char *str);
-void	ft_putstr(char *str);
-void	ft_putchar(char c);
-char    *ft_memset(void *s, int c, size_t count);
-#endif
+	str = s;
+	while (count)
+	{
+		*str++ = c;
+		count--;
+	}
+	return (s);
+}

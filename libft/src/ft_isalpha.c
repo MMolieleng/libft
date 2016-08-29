@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/23 13:10:52 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/23 13:21:21 by mmoliele         ###   ########.fr       */
+/*   Created: 2016/08/29 10:58:33 by mmoliele          #+#    #+#             */
+/*   Updated: 2016/08/29 11:09:20 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putstr(char *str)
+int	ft_isalpha(int c)
 {
-	if (*str && str)
-	{
-		while (*str)
-		{
-			write(1, str, 1);
-			str++;
-		}
-	}
+	if (ft_islower(c) || ft_isupper(c))
+		return (1);
+	else
+		return (0);
 }

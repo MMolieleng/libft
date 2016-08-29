@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/23 13:10:52 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/23 13:21:21 by mmoliele         ###   ########.fr       */
+/*   Created: 2016/08/29 12:02:57 by mmoliele          #+#    #+#             */
+/*   Updated: 2016/08/29 12:03:00 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putstr(char *str)
+size_t	ft_strlcat(char *dst, const char *sr, size_t size)
 {
-	if (*str && str)
-	{
-		while (*str)
-		{
-			write(1, str, 1);
-			str++;
-		}
-	}
+	size_t	dsize;
+	size_t	len;
+	size_t	res;
+	char	*src;
+
+	src = (char *)sr;
+	dsize = ft_strlen(dst);
+	len = ft_strlen(src);
+	res = dsize + len;
+	dst += dsize;
+	size -= dsize;
+	if (len >= size)
+		len = size - 1;
+	ft_memcpy(dst, src, len);
+	dst[len] = 0;
+	return (res);
 }

@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/23 13:10:52 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/23 13:21:21 by mmoliele         ###   ########.fr       */
+/*   Created: 2016/08/29 12:09:25 by mmoliele          #+#    #+#             */
+/*   Updated: 2016/08/29 12:11:22 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putstr(char *str)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	if (*str && str)
+	char	*tmp;
+	int		stop;
+
+	tmp = s1;
+	stop = 0;
+	if (n)
 	{
-		while (*str)
+		while (*s1)
+			s1++;
+		while ((n-- > 0) && *s2 != '\0')
 		{
-			write(1, str, 1);
-			str++;
+			*s1++ = *s2++;
 		}
+		*s1++ = '\0';
 	}
+	return (tmp);
 }

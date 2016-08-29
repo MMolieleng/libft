@@ -6,7 +6,7 @@
 #    By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 16:21:43 by mmoliele          #+#    #+#              #
-#    Updated: 2016/08/23 17:38:58 by mmoliele         ###   ########.fr        #
+#    Updated: 2016/08/29 12:41:18 by mmoliele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,12 +14,30 @@ NAME = libft.a
 
 CC = gcc -c -Wall -Werror -Wextra
 
-SRC = 	ft_putstr.c		\
-		ft_putchar.c	\
-		ft_strdup.c		\
-		ft_strlen.c		\
-		ft_memset.c		\
-		ft_bzero.c		\
+SRC = 	ft_putstr.c			\
+		ft_putchar.c		\
+		ft_strdup.c			\
+		ft_strlen.c			\
+		ft_strcat.c			\
+		ft_strcpy.c			\
+		ft_strncpy.c		\
+		ft_strncat.c		\
+		ft_strlcat.c		\
+		ft_bzero.c			\
+		ft_isalpha.c		\
+		ft_isalnum.c		\
+		ft_isascii.c		\
+		ft_islower.c		\
+		ft_iswhitespace.c	\
+		ft_isdigit.c		\
+		ft_isprint.c		\
+		ft_isupper.c		\
+		ft_memset.c			\
+		ft_memmove.c		\
+		ft_memcpy.c			\
+		ft_memcmp.c			\
+		ft_memchr.c			\
+		ft_memccpy.c		\
 
 INC = 	libft.h			\
 

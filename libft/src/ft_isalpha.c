@@ -6,7 +6,7 @@
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/29 10:58:33 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/29 11:09:20 by mmoliele         ###   ########.fr       */
+/*   Updated: 2016/08/29 13:53:06 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	if (ft_islower(c) || ft_isupper(c))
-		return (1);
-	else
-		return (0);
+	return (ft_islower(c) || ft_isupper(c));
 }

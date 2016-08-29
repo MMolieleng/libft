@@ -6,7 +6,7 @@
 #    By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 16:21:43 by mmoliele          #+#    #+#              #
-#    Updated: 2016/08/29 12:41:18 by mmoliele         ###   ########.fr        #
+#    Updated: 2016/08/29 15:08:21 by mmoliele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CC = gcc -c -Wall -Werror -Wextra
 
 SRC = 	ft_putstr.c			\
 		ft_putchar.c		\
+		ft_putnbr.c			\
 		ft_strdup.c			\
 		ft_strlen.c			\
 		ft_strcat.c			\
@@ -23,6 +24,7 @@ SRC = 	ft_putstr.c			\
 		ft_strncpy.c		\
 		ft_strncat.c		\
 		ft_strlcat.c		\
+		ft_strstrim.c		\
 		ft_bzero.c			\
 		ft_isalpha.c		\
 		ft_isalnum.c		\
@@ -32,12 +34,16 @@ SRC = 	ft_putstr.c			\
 		ft_isdigit.c		\
 		ft_isprint.c		\
 		ft_isupper.c		\
+		ft_toupper.c		\
+		ft_tolower.c		\
 		ft_memset.c			\
 		ft_memmove.c		\
 		ft_memcpy.c			\
 		ft_memcmp.c			\
 		ft_memchr.c			\
 		ft_memccpy.c		\
+		ft_memalloc.c		\
+		ft_atoi.c			\
 
 INC = 	libft.h			\
 

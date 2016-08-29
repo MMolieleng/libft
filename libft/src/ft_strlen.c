@@ -6,15 +6,15 @@
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 13:21:58 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/23 13:39:34 by mmoliele         ###   ########.fr       */
+/*   Updated: 2016/08/29 14:48:16 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (*str && str)

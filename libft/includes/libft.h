@@ -23,12 +23,18 @@ typedef struct			s_list
 }						t_list;
 */
 
-int		ft_strlen(const char *str);
+int	ft_strlen(const char *str);
 char	*ft_strdup(const char *str);
 char    *ft_strtrim(char const *s);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+int	ft_strcmp(const char *s1, const char *s2);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
 void    ft_putnbr(int n);
+char	*ft_strstr(const char *s1, const char *s2);
 void	*ft_memset(void *s, int c, size_t count);
 int    	ft_memcmp(const void *st1, const void *st2, size_t n);
 void   	*ft_memccpy(void *dest, const void *src, int x, size_t n);

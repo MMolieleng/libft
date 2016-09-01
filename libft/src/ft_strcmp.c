@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstrim.c                                      :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/29 14:36:10 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/29 14:37:08 by mmoliele         ###   ########.fr       */
+/*   Created: 2016/08/29 14:54:12 by mmoliele          #+#    #+#             */
+/*   Updated: 2016/08/29 14:57:15 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strtrim(char const *s)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int		i;
-	int		len;
-	char	*str;
+  int		i;
 
-	if (s == NULL)
-		return (NULL);
-	len = ft_strlen(s);
-	while (ft_iswhitespace(s[len - 1]))
-		len--;
-	i = -1;
-	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		len--;
-	if (len <= 0)
-		len = 0;
-	str = (char*)ft_memalloc(sizeof(char) * (len + 1));
-	if (str == NULL)
-		return (NULL);
-	s += i;
-	i = -1;
-	while (++i < len)
-		str[i] = *s++;
-	str[i] = '\0';
-	return (str);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0')
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

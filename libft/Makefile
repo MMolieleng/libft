@@ -25,7 +25,13 @@ SRC = 	ft_putstr.c			\
 		ft_strncat.c		\
 		ft_strlcat.c		\
 		ft_strstrim.c		\
-		ft_bzero.c			\
+		ft_strchr.c		\
+		ft_strrchr.c		\
+		ft_strstr.c		\
+		ft_strnstr.c		\
+		ft_strcmp.c		\
+		ft_strncmp.c		\
+		ft_bzero.c		\
 		ft_isalpha.c		\
 		ft_isalnum.c		\
 		ft_isascii.c		\

@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstrim.c                                      :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/29 14:36:10 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/08/29 14:37:08 by mmoliele         ###   ########.fr       */
+/*   Created: 2016/08/29 14:54:12 by mmoliele          #+#    #+#             */
+/*   Updated: 2016/08/29 14:57:15 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	int		len;
-	char	*str;
+	size_t	i;
 
-	if (s == NULL)
-		return (NULL);
-	len = ft_strlen(s);
-	while (ft_iswhitespace(s[len - 1]))
-		len--;
-	i = -1;
-	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		len--;
-	if (len <= 0)
-		len = 0;
-	str = (char*)ft_memalloc(sizeof(char) * (len + 1));
-	if (str == NULL)
-		return (NULL);
-	s += i;
-	i = -1;
-	while (++i < len)
-		str[i] = *s++;
-	str[i] = '\0';
-	return (str);
+	if (*s2 == '\0')
+		return ((char*)s1);
+	i = 0;
+	while (*s1 && n)
+	{
+		if (*s1 == s2[i])
+			i++;
+		else
+			i = 0;
+		if (s2[i] == '\0')
+			return ((char*)(s1 - i + 1));
+		s1++;
+		n--;
+	}
+	return (NULL);
 }

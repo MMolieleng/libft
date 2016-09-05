@@ -6,7 +6,7 @@
 #    By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 16:21:43 by mmoliele          #+#    #+#              #
-#    Updated: 2016/09/05 13:19:55 by mmoliele         ###   ########.fr        #
+#    Updated: 2016/09/05 14:56:39 by mmoliele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRC = 	ft_putstr.c			\
 		ft_memccpy.c		\
 		ft_memalloc.c		\
 		ft_atoi.c			\
+		ft_itoa.c			\
 
 INC = 	libft.h				\
 

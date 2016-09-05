@@ -6,7 +6,7 @@
 #    By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 16:21:43 by mmoliele          #+#    #+#              #
-#    Updated: 2016/08/29 15:08:21 by mmoliele         ###   ########.fr        #
+#    Updated: 2016/09/05 13:19:55 by mmoliele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,13 @@ SRC = 	ft_putstr.c			\
 		ft_strncat.c		\
 		ft_strlcat.c		\
 		ft_strstrim.c		\
-		ft_strchr.c		\
+		ft_strchr.c			\
 		ft_strrchr.c		\
-		ft_strstr.c		\
+		ft_strstr.c			\
 		ft_strnstr.c		\
-		ft_strcmp.c		\
+		ft_strcmp.c			\
 		ft_strncmp.c		\
-		ft_bzero.c		\
+		ft_bzero.c			\
 		ft_isalpha.c		\
 		ft_isalnum.c		\
 		ft_isascii.c		\
@@ -51,7 +51,7 @@ SRC = 	ft_putstr.c			\
 		ft_memalloc.c		\
 		ft_atoi.c			\
 
-INC = 	libft.h			\
+INC = 	libft.h				\
 
 OBJ	= $(SRC:.c=.o)
 
@@ -82,3 +82,5 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: clean

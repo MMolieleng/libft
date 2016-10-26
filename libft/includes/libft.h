@@ -6,7 +6,7 @@
 /*   By: mmoliele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 13:17:45 by mmoliele          #+#    #+#             */
-/*   Updated: 2016/09/05 14:56:23 by mmoliele         ###   ########.fr       */
+/*   Updated: 2016/09/05 15:03:04 by mmoliele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char    *ft_itoa(int n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+char	**ft_strsplit(const char *str, char c);
 
 int	ft_strcmp(const char *s1, const char *s2);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
